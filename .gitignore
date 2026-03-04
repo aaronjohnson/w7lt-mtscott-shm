@@ -1,0 +1,35 @@
+# Elixir / Phoenix
+_build/
+deps/
+*.ez
+.elixir_ls/
+hub/config/runtime.exs
+hub/apps/*/config/runtime.exs
+
+# Firmware secrets
+firmware/common/config.h
+firmware/**/config.h
+
+# Python
+analysis/.venv/
+analysis/__pycache__/
+analysis/.ipynb_checkpoints/
+*.pyc
+
+# LaTeX build artifacts
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+docs/*.fls
+docs/*.fdb_latexmk
+docs/*.synctex.gz
+
+# Data exports (large, not source)
+analysis/*.csv
+analysis/*.parquet
+
+# OS
+.DS_Store
+Thumbs.db
+
