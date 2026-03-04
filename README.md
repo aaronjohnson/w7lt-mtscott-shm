@@ -3,9 +3,15 @@
 **Portland Amateur Radio Club (W7LT) · Mt. Scott Repeater Site · KD7VDG**
 
 [![Status](https://img.shields.io/badge/status-active%20development-green)](.)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 
-A structural health monitoring (SHM) system for the W7LT repeater antenna mast at Mt. Scott, Portland OR. The project spans three interleaved concerns: (1) a geometric analysis and field correction of a leaning antenna pole, (2) a four-tier comparative MEMS accelerometer metrology study, and (3) a real-time monitoring platform built on Elixir/Phoenix and PostgreSQL/TimescaleDB.
+## About
+
+This project brings precision measurement science to amateur radio infrastructure. The W7LT repeater site on Mt. Scott hosts a leaning antenna mast atop a wooden telephone pole at ~1,000 ft elevation overlooking Portland, OR. Rather than just fixing the lean and walking away, we turned it into a full structural health monitoring platform — continuous MEMS accelerometer sensing, real-time dashboards, and enough rigor to publish the results.
+
+The work sits at the intersection of ham radio field engineering, embedded systems, and metrology. Four tiers of MEMS sensors (from a $5 MPU-6050 to a research-grade ADXL355) run side by side on the same mast, generating a comparative dataset that answers a practical question: how much sensor do you actually need to monitor a pole? The monitoring platform runs on Elixir/Phoenix with TimescaleDB for time-series storage, served from a Raspberry Pi in the repeater shack.
+
+The project spans three interleaved concerns: (1) a geometric analysis and field correction of the leaning antenna pole, (2) a four-tier comparative MEMS accelerometer metrology study, and (3) a real-time monitoring platform built on Elixir/Phoenix and PostgreSQL/TimescaleDB.
 
 This repository is also the research substrate for a series of QEX and IEEE Sensors Journal articles on applying precision measurement science to amateur radio infrastructure.
 
@@ -204,7 +210,7 @@ Major line items: ESP32 nodes ($71), ADXL355 eval boards ($134), BNO055 ($60), I
 
 ## License
 
-MIT — see [LICENSE](LICENSE)
+Apache 2.0 — see [LICENSE](LICENSE)
 
 ---
 
