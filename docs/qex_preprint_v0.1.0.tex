@@ -339,6 +339,11 @@ Wind force per unit length on a 3-inch cylinder at 60~mph design wind
   w = \tfrac{1}{2}(0.00238)(88)^2(1.2)(0.25) = 2.76~\text{lb/ft}
 \end{equation}
 %
+where $0.00238$~slug/ft$^3$ is the standard sea-level ISA air density
+\cite{ISA1975}. At Mt.~Scott's elevation of $\sim\!1{,}000$~ft, the actual
+density is approximately $0.00231$~slug/ft$^3$ ($-3\%$); the sea-level value
+is used as a conservative upper bound.
+%
 At $s = h = 5.5$~ft:
 \begin{align*}
   F &= 2.76 \times 5.5 = 15.2~\text{lb (total wind on cantilever)} \\
@@ -487,7 +492,9 @@ consumed by corrections.
 The field survey answered the question ``how much has the pole leaned?'' It
 cannot answer: ``is the lean increasing?'', ``at what rate?'', or ``is a wind
 event in progress right now?'' A follow-on project will deploy a continuous
-structural health monitoring (SHM) system at the site.
+structural health monitoring (SHM) system at the site. The same first-principles
+rigor that informs the mechanical correction---asking what you actually need
+to measure and why---informs the sensor selection.
 
 The architecture is two-tier: an ESP32-S3 sensor node on the pole (solar +
 LiPo powered, MEMS IMU, MQTT over WiFi) feeds a Raspberry Pi hub in the shack
@@ -586,6 +593,11 @@ Table~12.5.1 (Bolt Spacing Requirements).
 C.~R.\ Farrar and K.~Worden,
 \textit{Structural Health Monitoring: A Machine Learning Perspective},
 Wiley, 2012, Ch.~3 (Feature Extraction).
+
+\bibitem{ISA1975}
+International Organization for Standardization,
+\textit{Standard Atmosphere}, ISO~2533:1975, 1975.
+Sea-level density: $\rho_0 = 1.225$~kg/m$^3$ ($0.002377$~slug/ft$^3$).
 
 \end{thebibliography}
 
